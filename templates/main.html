@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dementia Prediction</title>
+</head>
+<body>
+    <h2>Dementia Prediction</h2>
+    <form action="/predict" method="POST">
+        <label for="AGE">Age:</label>
+        <input type="number" id="AGE" name="AGE" required><br><br>
+        
+        <label for="SEX">Sex (1 for male, 0 for female):</label>
+        <input type="number" id="SEX" name="SEX" min="0" max="1" required><br><br>
+        
+        <label for="EDUC">Years of Education:</label>
+        <input type="number" id="EDUC" name="EDUC" placeholder="6-23" required><br><br>
+        
+        <label for="SES">Socioeconomic Status:</label>
+        <input type="number" id="SES" name="SES" placeholder="1-5" required><br><br>
+        
+        <label for="ETIV">Estimated Total Intracranial Volume:</label>
+        <input type="number" id="ETIV" name="ETIV" placeholder="6-23" required><br><br>
+        
+        <label for="NWBV">Normalized Whole Brain Volume:</label>
+        <input type="number" id="NWBV" name="NWBV" step="0.01" placeholder="0.6 - 0.8" required><br><br>
+        
+        <label for="ASF">Atlas Scaling Factor:</label>
+        <input type="number" id="ASF" name="ASF" step="0.01" placeholder="0.8 - 1.5" required><br><br>
+        
+        <label for="MMSE">Mini-Mental State Examination (MMSE):</label>
+        <input type="number" id="MMSE" name="MMSE" placeholder="4 - 30" required><br><br>
+    
+        
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
